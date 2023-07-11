@@ -1,0 +1,11 @@
+{
+  "name": "asp-classic-lsp-server",
+  "version": "1.0.0",
+  "description": "Server part of the ASP Classic language server protocol",
+  "repository": {
+    "type": "git",
+    "url": "asp-classic-lsp-server"
+  },
+  "author": "Karel Lukas",
+  "license": "ISC"
+}

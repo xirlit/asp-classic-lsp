@@ -1,0 +1,42 @@
+{
+  "name": "asp-classic-lsp",
+  "version": "1.0.0",
+  "description": "ASP Classic language server protocol",
+  "main": "./client/out/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+    "test": "sh ./scripts/e2e.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asp-classic-lsp"
+  },
+  "keywords": [
+    "asp",
+    "classic",
+    "lsp",
+    "language",
+    "server",
+    "protocol"
+  ],
+  "author": "Karel Lukas",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "activationEvents": [
+    "onLanguage:plaintext"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^8.1.0",
+    "vscode-languageserver-textdocument": "^1.0.8"
+  }
+}
